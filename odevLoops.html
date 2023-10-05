@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+  <script>
+
+    // "Tech Career" metnini tersten yazdır
+
+    function reverseText(text) {
+    return text.split('').reverse().join('');
+    }
+
+    var text = "Tech Career";
+    var reversedText = reverseText(text);
+
+    console.log(reversedText); 
+
+    // var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
+
+    var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+
+    var pNumbers = numbers.filter(num => num > 0);
+    var sumPNumbers = pNumbers.reduce((sum, num) => sum + num, 0);
+
+    console.log('Sadece pozitif sayıların toplamı:', sumPNumbers);
+
+
+    // var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
+
+    var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+    var maxNumber = Math.max(...numbers);
+    console.log('Dizideki en büyük sayı:', maxNumber);
+
+
+    //1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu console yaz.
+
+    var numbers = Array.from({ length: 50 }, (_, i) => i + 1); 
+
+    var divisibleNumber = numbers.filter(num => num % 3 === 0 || num % 5 === 0);
+
+    console.log('3\'e veya 5\'e tam bölünebilen sayılar:', divisibleNumber);
+    console.log('Toplam sayı adedi:', divisibleNumber.length);
+
+
+  </script>
+</html>
